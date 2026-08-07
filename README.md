@@ -24,6 +24,7 @@ FDE interviews test a unique combination of skills: **agentic system design, liv
 
 ## Table of Contents
 
+- [Free Learning Paths](#-free-learning-paths)
 - [Behavioral](#-behavioral)
 - [System Design](#-system-design)
 - [Coding](#-coding)
@@ -31,6 +32,39 @@ FDE interviews test a unique combination of skills: **agentic system design, liv
 - [Customer-Facing Case Study](#-customer-facing-case-study)
 - [Company Guides](#-company-guides)
 - [Contributing](#-contributing)
+
+---
+
+## 📚 Free Learning Paths
+
+Use the question bank below to test yourself, then use these structured courses to build the underlying skills.
+
+### GenAI Architecture
+
+Learn how to design, evaluate, secure, and operate production GenAI systems—from foundation models and RAG to agents, MCP, guardrails, and deployment.
+
+| Module | What you will learn |
+|--------|---------------------|
+| 1. Foundations of GenAI Systems | How GenAI software differs from traditional systems, what makes a system agentic, and the engineer's changing role |
+| 2. Building Blocks of GenAI Systems | Models, prompts, context, retrieval, structured output, tools, MCP, state, memory, identity, and permissions |
+| 3. GenAI Architecture Patterns | Direct LLM apps, RAG, deterministic and agentic workflows, skills, multi-agent systems, and human approval |
+| 4. Reliable AI Systems | Evaluation, threat modeling, guardrails, observability, incident evidence, governance, and readiness reviews |
+| 5. Production-Grade GenAI Engineering | Reference architectures, model gateways, deployment, data, CI/CD, scaling, rollout, and ownership |
+
+→ **[Start the free GenAI Architecture course](https://fdehandbook.com/learn/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=fde_interview_prep)**
+
+### End-to-End Engineering
+
+Learn how a tech lead or FDE turns an ambiguous customer request into a scoped, estimable project—and owns delivery through rollout and measurable results.
+
+| Module | What you will learn |
+|--------|---------------------|
+| 1. Course Overview | The end-to-end engineering mindset and delivery model |
+| 2. From Request to Plan | Mapping the problem, defining scope, reading complexity, and finding hidden production work |
+| 3. Estimate and Execute | Estimating AI work, cutting scope, building a defensible estimate, planning delivery, and proving results |
+| 4. Apply the Method | Booking and support-copilot case studies, a field guide, a 30-minute workshop, and a pre-estimate checklist |
+
+→ **[Start the free End-to-End Engineering course](https://fdehandbook.com/learn/end-to-end-engineering?utm_source=github&utm_medium=referral&utm_campaign=fde_interview_prep)**
 
 ---
 
@@ -229,6 +263,7 @@ This repo contains a curated sample. The complete handbook at **[fdehandbook.com
 
 - ✅ 195 questions across all 5 categories
 - ✅ Detailed answer frameworks and sample responses
+- ✅ Free GenAI Architecture and End-to-End Engineering courses
 - ✅ Company-specific prep guides (Palantir, Databricks, Scale AI, Anduril, Google)
 - ✅ Weekly FDE job market data
 - ✅ Discord community
