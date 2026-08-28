@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" role="img" aria-labelledby="title desc">
+  <title id="title">Production GenAI Architecture Map</title>
+  <desc id="desc">A reference architecture showing experience, orchestration, knowledge, action, model, and reliability layers for production GenAI systems.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8F7FF"/>
+      <stop offset="1" stop-color="#F1F5FF"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6D5EF7"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#292458" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#746CA6"/>
+    </marker>
+    <style>
+      .title { font: 700 46px Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #17152B; }
+      .subtitle { font: 400 21px Inter, ui-sans-serif, system-ui, sans-serif; fill: #625E78; }
+      .section { font: 700 14px Inter, ui-sans-serif, system-ui, sans-serif; letter-spacing: 2px; fill: #6D5EF7; }
+      .heading { font: 700 23px Inter, ui-sans-serif, system-ui, sans-serif; fill: #211E38; }
+      .body { font: 400 17px Inter, ui-sans-serif, system-ui, sans-serif; fill: #625E78; }
+      .small { font: 500 14px Inter, ui-sans-serif, system-ui, sans-serif; fill: #77728D; }
+      .chip { font: 600 14px Inter, ui-sans-serif, system-ui, sans-serif; fill: #3A3557; }
+      .whiteHeading { font: 700 24px Inter, ui-sans-serif, system-ui, sans-serif; fill: #FFFFFF; }
+      .whiteBody { font: 400 16px Inter, ui-sans-serif, system-ui, sans-serif; fill: #EDEAFF; }
+      .line { fill: none; stroke: #746CA6; stroke-width: 3; marker-end: url(#arrow); }
+      .dash { fill: none; stroke: #A59FC6; stroke-width: 2.5; stroke-dasharray: 8 8; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="980" rx="34" fill="url(#bg)"/>
+  <circle cx="1425" cy="95" r="180" fill="#DCD7FF" opacity="0.35"/>
+  <circle cx="1540" cy="20" r="110" fill="#BFD9FF" opacity="0.25"/>
+
+  <text x="80" y="82" class="section">REFERENCE ARCHITECTURE</text>
+  <text x="80" y="139" class="title">Production GenAI Architecture Map</text>
+  <text x="80" y="180" class="subtitle">Start simple. Add retrieval, tools, and autonomy only when the product requires them.</text>
+
+  <!-- Entry -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="225" width="290" height="150" rx="22" fill="#FFFFFF" stroke="#DDD9F0" stroke-width="2"/>
+  </g>
+  <text x="108" y="258" class="section">01 · EXPERIENCE</text>
+  <text x="108" y="298" class="heading">User &amp; channels</text>
+  <text x="108" y="330" class="body">Web · chat · API · copilot</text>
+  <text x="108" y="355" class="small">Intent, identity, files, feedback</text>
+
+  <!-- Control plane -->
+  <g filter="url(#shadow)">
+    <rect x="465" y="217" width="670" height="166" rx="24" fill="url(#hero)"/>
+  </g>
+  <text x="500" y="255" class="whiteBody" style="font-weight:700;letter-spacing:2px">02 · APPLICATION CONTROL PLANE</text>
+  <text x="500" y="298" class="whiteHeading">Harness / orchestrator</text>
+  <text x="500" y="331" class="whiteBody">Instructions · context assembly · state · routing · budgets · stop conditions</text>
+  <rect x="500" y="348" width="145" height="27" rx="13.5" fill="#FFFFFF" opacity="0.15"/>
+  <text x="519" y="367" class="whiteBody" style="font-size:13px;font-weight:600">Deterministic first</text>
+  <rect x="657" y="348" width="152" height="27" rx="13.5" fill="#FFFFFF" opacity="0.15"/>
+  <text x="676" y="367" class="whiteBody" style="font-size:13px;font-weight:600">Explicit permissions</text>
+  <rect x="821" y="348" width="184" height="27" rx="13.5" fill="#FFFFFF" opacity="0.15"/>
+  <text x="840" y="367" class="whiteBody" style="font-size:13px;font-weight:600">Bounded autonomy</text>
+
+  <!-- Human -->
+  <g filter="url(#shadow)">
+    <rect x="1230" y="225" width="290" height="150" rx="22" fill="#FFF8EA" stroke="#F3D9A6" stroke-width="2"/>
+  </g>
+  <text x="1258" y="258" class="section" style="fill:#B56A13">HUMAN CONTROL</text>
+  <text x="1258" y="298" class="heading">Review &amp; approval</text>
+  <text x="1258" y="330" class="body">Escalations · overrides</text>
+  <text x="1258" y="355" class="small">Required for high-risk actions</text>
+
+  <path d="M 370 300 L 455 300" class="line"/>
+  <path d="M 1135 300 L 1220 300" class="line"/>
+
+  <!-- Knowledge plane -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="460" width="455" height="244" rx="24" fill="#FFFFFF" stroke="#BFD9FF" stroke-width="2"/>
+  </g>
+  <rect x="80" y="460" width="9" height="244" rx="4.5" fill="#4E9BF5"/>
+  <text x="116" y="500" class="section" style="fill:#2878D0">03 · KNOWLEDGE PLANE</text>
+  <text x="116" y="540" class="heading">RAG &amp; context</text>
+  <text x="116" y="572" class="body">Use when knowledge is private, current,</text>
+  <text x="116" y="598" class="body">large, permissioned, or must be cited.</text>
+  <rect x="116" y="625" width="112" height="34" rx="17" fill="#EAF4FF"/>
+  <text x="137" y="647" class="chip">Ingestion</text>
+  <rect x="238" y="625" width="105" height="34" rx="17" fill="#EAF4FF"/>
+  <text x="258" y="647" class="chip">Retrieve</text>
+  <rect x="353" y="625" width="101" height="34" rx="17" fill="#EAF4FF"/>
+  <text x="373" y="647" class="chip">Rerank</text>
+  <text x="116" y="685" class="small">Hybrid search · access filtering · citations</text>
+
+  <!-- Model runtime -->
+  <g filter="url(#shadow)">
+    <rect x="572" y="460" width="455" height="244" rx="24" fill="#FFFFFF" stroke="#D8C9FF" stroke-width="2"/>
+  </g>
+  <rect x="572" y="460" width="9" height="244" rx="4.5" fill="#8B5CF6"/>
+  <text x="608" y="500" class="section">04 · INTELLIGENCE LAYER</text>
+  <text x="608" y="540" class="heading">Model runtime</text>
+  <text x="608" y="572" class="body">Generation · reasoning · structured output</text>
+  <text x="608" y="598" class="body">through a provider-neutral gateway.</text>
+  <rect x="608" y="625" width="116" height="34" rx="17" fill="#F2EDFF"/>
+  <text x="631" y="647" class="chip">Gateway</text>
+  <rect x="734" y="625" width="123" height="34" rx="17" fill="#F2EDFF"/>
+  <text x="756" y="647" class="chip">Fallbacks</text>
+  <rect x="867" y="625" width="117" height="34" rx="17" fill="#F2EDFF"/>
+  <text x="887" y="647" class="chip">Caching</text>
+  <text x="608" y="685" class="small">Version prompts, models, schemas, and policies</text>
+
+  <!-- Action plane -->
+  <g filter="url(#shadow)">
+    <rect x="1065" y="460" width="455" height="244" rx="24" fill="#FFFFFF" stroke="#BDE7D2" stroke-width="2"/>
+  </g>
+  <rect x="1065" y="460" width="9" height="244" rx="4.5" fill="#25A66A"/>
+  <text x="1101" y="500" class="section" style="fill:#168354">05 · ACTION PLANE</text>
+  <text x="1101" y="540" class="heading">Tools &amp; workflows</text>
+  <text x="1101" y="572" class="body">Use agents only when the next step or</text>
+  <text x="1101" y="598" class="body">tool must be chosen at runtime.</text>
+  <rect x="1101" y="625" width="94" height="34" rx="17" fill="#E9F8F0"/>
+  <text x="1124" y="647" class="chip">Tools</text>
+  <rect x="1205" y="625" width="98" height="34" rx="17" fill="#E9F8F0"/>
+  <text x="1226" y="647" class="chip">MCP</text>
+  <rect x="1313" y="625" width="140" height="34" rx="17" fill="#E9F8F0"/>
+  <text x="1334" y="647" class="chip">Agent loop</text>
+  <text x="1101" y="685" class="small">Validate inputs · authorize · idempotency · audit</text>
+
+  <path d="M 710 383 C 650 414, 450 414, 360 450" class="line"/>
+  <path d="M 800 383 L 800 450" class="line"/>
+  <path d="M 890 383 C 950 414, 1150 414, 1240 450" class="line"/>
+  <path d="M 535 580 L 562 580" class="line"/>
+  <path d="M 1027 580 L 1055 580" class="line"/>
+
+  <!-- Reliability spine -->
+  <g filter="url(#shadow)">
+    <rect x="80" y="778" width="1440" height="138" rx="24" fill="#1F1C37"/>
+  </g>
+  <text x="116" y="816" class="section" style="fill:#BDB5FF">RELIABILITY SPINE · EVERY REQUEST, EVERY RELEASE</text>
+  <text x="116" y="854" class="whiteHeading">Evaluate → trace → learn → improve</text>
+
+  <rect x="515" y="809" width="165" height="66" rx="17" fill="#2E294F" stroke="#514A79"/>
+  <text x="546" y="838" class="whiteBody" style="font-weight:700">Evaluation</text>
+  <text x="546" y="860" class="whiteBody" style="font-size:13px">offline + online</text>
+  <rect x="695" y="809" width="165" height="66" rx="17" fill="#2E294F" stroke="#514A79"/>
+  <text x="727" y="838" class="whiteBody" style="font-weight:700">Observability</text>
+  <text x="727" y="860" class="whiteBody" style="font-size:13px">traces + cost</text>
+  <rect x="875" y="809" width="165" height="66" rx="17" fill="#2E294F" stroke="#514A79"/>
+  <text x="906" y="838" class="whiteBody" style="font-weight:700">Guardrails</text>
+  <text x="906" y="860" class="whiteBody" style="font-size:13px">policy + recovery</text>
+  <rect x="1055" y="809" width="165" height="66" rx="17" fill="#2E294F" stroke="#514A79"/>
+  <text x="1088" y="838" class="whiteBody" style="font-weight:700">Security</text>
+  <text x="1088" y="860" class="whiteBody" style="font-size:13px">least privilege</text>
+  <rect x="1235" y="809" width="235" height="66" rx="17" fill="#2E294F" stroke="#514A79"/>
+  <text x="1267" y="838" class="whiteBody" style="font-weight:700">Release engineering</text>
+  <text x="1267" y="860" class="whiteBody" style="font-size:13px">datasets + regression gates</text>
+
+  <path d="M 305 704 L 305 768" class="dash"/>
+  <path d="M 800 704 L 800 768" class="dash"/>
+  <path d="M 1292 704 L 1292 768" class="dash"/>
+
+  <text x="80" y="952" class="small">fdehandbook.com · GenAI Architecture Guide for FDE &amp; Applied AI Interviews</text>
+</svg>

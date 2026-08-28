@@ -6,6 +6,10 @@ This guide is written for **Forward Deployed Engineer (FDE)**, **Applied AI Engi
 
 **[Start the complete FDE GenAI course →](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
+![Production GenAI Architecture Map](assets/production-genai-architecture-map.svg)
+
+The map separates the application control plane from retrieval, model runtime, and external actions. Evaluation, observability, guardrails, security, and release engineering span the entire system rather than appearing as afterthoughts.
+
 ## What makes this guide different
 
 - **Architecture decisions, not framework tutorials.** Learn when to use a direct model call, RAG, a deterministic workflow, or an agent.
