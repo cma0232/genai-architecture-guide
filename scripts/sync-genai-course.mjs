@@ -37,6 +37,49 @@ function gateCopy(access, slug) {
   return `\n> **Continue the course**\n>\n> **Create a free account to keep reading.** Continue learning and keep your progress synced across the platform.\n>\n> [Create a free account](${url})\n`;
 }
 
+function blockquote(content, label) {
+  const prefix = label ? `**${label}:** ` : "";
+  return `${prefix}${content.trim()}`
+    .split("\n")
+    .map((line) => `> ${line}`)
+    .join("\n");
+}
+
+function quizToMarkdown(block) {
+  const question = block.match(/question="([^"]+)"/)?.[1] ?? "Check your understanding";
+  const explain = block.match(/explain="([^"]+)"/)?.[1] ?? "";
+  const options = [...block.matchAll(/\{ label: "([^"]+)", text: "([^"]+)"(?:, correct: true)? \}/g)]
+    .map((match) => ({
+      label: match[1],
+      text: match[2],
+      correct: match[0].includes("correct: true"),
+    }));
+  const correct = options.find((option) => option.correct);
+  const choices = options.map((option) => `- **${option.label}.** ${option.text}`).join("\n");
+  const answer = correct ? `**Answer: ${correct.label}.** ${explain}` : explain;
+
+  return `<details>\n<summary><strong>Check your understanding:</strong> ${question}</summary>\n\n${choices}\n\n${answer}\n\n</details>`;
+}
+
+function githubMarkdown(mdx) {
+  return mdx
+    .replace(/<ReadingTime minutes=\{(\d+)\} \/>/g, "_Estimated reading time: $1 minutes._")
+    .replace(/<p className="lead">([\s\S]*?)<\/p>/g, "$1")
+    .replace(/<Callout([^>]*)>([\s\S]*?)<\/Callout>/g, (_, attrs, content) => {
+      const label = attrs.match(/label="([^"]+)"/)?.[1];
+      return blockquote(content, label);
+    })
+    .replace(/<Analogy>([\s\S]*?)<\/Analogy>/g, (_, content) => blockquote(content, "Analogy"))
+    .replace(/<Quiz[\s\S]*?\/>/g, quizToMarkdown)
+    .replace(/<MiniFlow>\s*\{\`([\s\S]*?)\`\}\s*<\/MiniFlow>/g, (_, content) => "```text\n" + content.trim() + "\n```")
+    .replace(/<FlowBox>([\s\S]*?)<\/FlowBox>/g, (_, content) => `**${content.trim()}**`)
+    .replace(/\s*<FlowArrow \/>\s*/g, " → ")
+    .replace(/<Col title="([^"]+)">/g, "### $1")
+    .replace(/<\/?(?:Takeaway|TwoCol|Col|Flow|Checklist)>/g, "")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim();
+}
+
 for (const match of source.matchAll(chapterPattern)) {
   const [, slug, number, title, section] = match;
   const folder = folders.get(section);
@@ -49,7 +92,8 @@ for (const match of source.matchAll(chapterPattern)) {
   const access = section === "Foundations of GenAI Systems"
     ? "public"
     : memberSlugs.has(slug) ? "member" : "account";
-  const body = access === "public" ? mdx : gatedPreview(mdx) + gateCopy(access, slug);
+  const visibleSource = access === "public" ? mdx : gatedPreview(mdx) + gateCopy(access, slug);
+  const body = githubMarkdown(visibleSource);
 
   fs.writeFileSync(path.join(targetDir, filename), `${body.trimEnd()}\n`);
 }

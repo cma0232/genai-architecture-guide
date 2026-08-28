@@ -1,22 +1,46 @@
-# GenAI Architecture Field Guide
+# GenAI Architecture Guide for FDE & Applied AI Interviews
 
-> A practical, production-oriented guide to designing GenAI systems for real users, customer data, external tools, and operational failures.
+Learn how to design and explain production GenAI systems—from model APIs and RAG to agents, evaluation, security, and operations.
 
-[![Complete Course](https://img.shields.io/badge/Complete%20Course-FDE%20Handbook-black?style=flat-square)](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
-[![Guided Practice](https://img.shields.io/badge/Practice-Architecture%20Scenarios-6D5EF5?style=flat-square)](https://www.fdehandbook.com/practice/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
-[![AI Mock Interview](https://img.shields.io/badge/Practice-AI%20Mock%20Interviewer-5865F2?style=flat-square)](https://www.fdehandbook.com/practice/mock/ai-interviewer?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
+This guide is written for **Forward Deployed Engineer (FDE)**, **Applied AI Engineer**, and **AI Engineer** candidates who need to reason about customer-facing AI systems, not memorize a fashionable framework.
 
-This open field guide is written for Forward Deployed Engineers, Applied AI Engineers, and software engineers building customer-facing AI systems.
+**[Start the complete FDE GenAI course →](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
-It focuses on architecture decisions:
+## What makes this guide different
 
-- What belongs around the model?
-- When should you use RAG, tools, workflows, or agents?
-- How much authority should the model receive?
-- How do you evaluate and debug probabilistic systems?
-- What evidence is required before production rollout?
+- **Architecture decisions, not framework tutorials.** Learn when to use a direct model call, RAG, a deterministic workflow, or an agent.
+- **Production trade-offs, not toy chatbots.** Treat permissions, evaluation, latency, cost, observability, and recovery as part of the design.
+- **Structured for system-design interviews.** Build the vocabulary and decision process expected in FDE and Applied AI interviews.
+- **Connected to deliberate practice.** Continue into guided architecture scenarios, coding exercises, and an AI mock interviewer when you are ready to rehearse.
 
-The goal is not to memorize a fashionable stack. It is to choose the simplest architecture that satisfies the product, safety, and operational requirements.
+## Start here
+
+1. [Why GenAI changes software architecture](01-foundations-of-genai-systems/1.1-from-traditional-software-to-genai-systems.md)
+2. [What makes a system agentic?](01-foundations-of-genai-systems/1.3-what-makes-a-system-agentic.md)
+3. [Model + Harness](01-foundations-of-genai-systems/1.4-model-plus-harness.md)
+4. [RAG Architecture Pattern](03-genai-architecture-patterns/3.3-rag-architecture-pattern.md)
+5. [Why AI Reliability Is Different](04-reliable-ai-systems/4.1-why-ai-reliability-is-different.md)
+
+## Architecture pattern selection cheat sheet
+
+Start with the simplest pattern that satisfies the requirement. Add autonomy only when the system genuinely needs to choose its path at runtime.
+
+| Requirement | Start with | Add only when needed |
+|---|---|---|
+| Generate, classify, extract, or transform bounded input | Direct model call | Structured output and deterministic validation |
+| Maintain a conversational interface | Chatbot | Explicit history selection and state |
+| Answer from private, current, or citable knowledge | RAG | Hybrid retrieval, reranking, and access-aware filtering |
+| Execute a known multi-step business process | Deterministic workflow | Model steps inside application-controlled transitions |
+| Choose tools or next steps dynamically | Agentic workflow | Budgets, stop conditions, scoped permissions, and recovery |
+| Perform an irreversible or high-risk action | Human approval | Audit evidence and explicit authorization before execution |
+
+Before choosing a pattern, ask:
+
+- Does the model already have the required information?
+- Are the execution steps known in advance?
+- Must the system take an external action?
+- What is the cost of a plausible but wrong result?
+- How will we evaluate, trace, recover, and stop it?
 
 ## Course contents
 
@@ -38,7 +62,6 @@ Locked lessons use the same **Continue the course** or **Member chapter** bounda
 
 ## Continue with practice
 
-- [Complete GenAI Architecture course](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
 - [GenAI architecture scenarios](https://www.fdehandbook.com/practice/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
 - [Build an agent loop from scratch](https://www.fdehandbook.com/practice/coding/agent-loop-from-scratch?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
 - [AI Mock Interviewer](https://www.fdehandbook.com/practice/mock/ai-interviewer?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
@@ -46,6 +69,8 @@ Locked lessons use the same **Continue the course** or **Member chapter** bounda
 
 The previous question-bank README is preserved in [`archive/question-bank.md`](archive/question-bank.md).
 
----
+## License
+
+Course content is available under [CC BY-NC 4.0](LICENSE). You may share and adapt it with attribution for non-commercial use. The synchronization script is available under the [MIT License](scripts/LICENSE).
 
 Built for engineers preparing for Forward Deployed Engineer, Applied AI Engineer, Solutions Engineer, Customer Engineer, and Field Engineer roles.
