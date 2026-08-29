@@ -2,7 +2,7 @@
 
 > The complete interview prep guide for **Forward Deployed Engineer** roles at Palantir, Databricks, Scale AI, Anduril, Google, and beyond.
 
-[![Website](https://img.shields.io/badge/Full%20Question%20Bank-fdehandbook.com-black?style=flat-square)](https://fdehandbook.com)
+[![Website](https://img.shields.io/badge/Full%20Question%20Bank-fdehandbook.com-black?style=flat-square)](https://www.fdehandbook.com?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
 [![Discord](https://img.shields.io/badge/Community-Discord-5865F2?style=flat-square&logo=discord)](https://discord.gg/GnUdge3k3)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/cma0232/fde-interview-prep/pulls)
 
@@ -97,7 +97,7 @@ FDE behavioral interviews use STAR format but focus on **customer impact, ambigu
 | 21 | How would you create an implementation roadmap from prototype to production? |
 | 22 | How would you convert interview ambiguity into a clear answer without asking endless questions? |
 
-→ **[See all 34 behavioral questions + frameworks at fdehandbook.com](https://fdehandbook.com/practice/behavioral)**
+→ **[See all 34 behavioral questions + frameworks at fdehandbook.com](https://www.fdehandbook.com/practice/behavioral?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
 ---
 
@@ -130,7 +130,7 @@ FDE system design questions emphasize **observability, security, multi-tenancy, 
 | 21 | How would you design alerting for a GenAI system without creating noise? |
 | 22 | How would you build a production support playbook for a GenAI pilot? |
 
-→ **[See all 30 system design questions + sample answers at fdehandbook.com](https://fdehandbook.com/practice/system-design)**
+→ **[See all 30 system design questions + sample answers at fdehandbook.com](https://www.fdehandbook.com/practice/system-design?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
 ---
 
@@ -163,7 +163,7 @@ FDE coding questions are **practical and deployment-focused** — less LeetCode,
 | 21 | Reconcile CRM and data warehouse records with conflicting update timestamps. |
 | 22 | Implement a rate limiter with a sliding window in TypeScript. |
 
-→ **[See all 50 coding questions + solutions at fdehandbook.com](https://fdehandbook.com/practice/coding)**
+→ **[See all 50 coding questions + solutions at fdehandbook.com](https://www.fdehandbook.com/practice/coding?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
 ---
 
@@ -199,7 +199,7 @@ The most FDE-specific category. These questions test your ability to **design, d
 | 24 | A tool-using agent updates the wrong record. How would you investigate and prevent recurrence? |
 | 25 | A customer pilot has low adoption despite good technical metrics. How do you diagnose it? |
 
-→ **[See all 50 GenAI architecture questions + deep-dive answers at fdehandbook.com](https://fdehandbook.com/practice/genai-architecture)**
+→ **[See all 50 GenAI architecture questions + deep-dive answers at fdehandbook.com](https://www.fdehandbook.com/practice/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
 ---
 
@@ -228,7 +228,7 @@ FDE case studies simulate the real job: **decompose a vague business problem, pr
 | 17 | A recruiter tells you the final round will focus on building an agentic workflow for a customer problem. How do you prep? |
 | 18 | Prioritize a backlog of 12 feature requests from 3 different enterprise clients. |
 
-→ **[See all 31 case study questions + structured frameworks at fdehandbook.com](https://fdehandbook.com/practice/case-study)**
+→ **[See all 31 case study questions + structured frameworks at fdehandbook.com](https://www.fdehandbook.com/practice/case-study?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
 
 ---
 
@@ -238,11 +238,11 @@ Deep-dive interview guides for the companies most known for FDE hiring:
 
 | Company | Guide |
 |---------|-------|
-| Palantir | [Palantir FDE Interview Guide](https://fdehandbook.com/companies/palantir) |
-| Databricks | [Databricks FDE Interview Guide](https://fdehandbook.com/companies/databricks) |
-| Scale AI | [Scale AI FDE Interview Guide](https://fdehandbook.com/companies/scale-ai) |
-| Anduril | [Anduril FDE Interview Guide](https://fdehandbook.com/companies/anduril) |
-| Google | [Google FDE Interview Guide](https://fdehandbook.com/companies/google) |
+| Palantir | [Palantir FDE Interview Guide](https://www.fdehandbook.com/companies/palantir?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide) |
+| Databricks | [Databricks FDE Interview Guide](https://www.fdehandbook.com/companies/databricks?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide) |
+| Scale AI | [Scale AI FDE Interview Guide](https://www.fdehandbook.com/companies/scale-ai?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide) |
+| Anduril | [Anduril FDE Interview Guide](https://www.fdehandbook.com/companies/anduril?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide) |
+| Google | [Google FDE Interview Guide](https://www.fdehandbook.com/companies/google?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide) |
 
 ---
 
@@ -259,7 +259,7 @@ All community contributions help keep this resource current.
 
 ## Full Question Bank
 
-This repo contains a curated sample. The complete handbook at **[fdehandbook.com](https://fdehandbook.com)** includes:
+This repo contains a curated sample. The complete handbook at **[fdehandbook.com](https://www.fdehandbook.com?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)** includes:
 
 - ✅ 195 questions across all 5 categories
 - ✅ Detailed answer frameworks and sample responses
