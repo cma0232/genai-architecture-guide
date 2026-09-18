@@ -4,7 +4,7 @@ Learn how to design and explain production GenAI systems—from model APIs and R
 
 This guide is written for **Forward Deployed Engineer (FDE)**, **Applied AI Engineer**, and **AI Engineer** candidates who need to reason about customer-facing AI systems, not memorize a fashionable framework.
 
-**[Start the complete FDE GenAI course →](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)**
+**[Start the complete FDE GenAI course →](https://www.fdehandbook.com/learn/genai-architecture/overview?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide&utm_content=readme_top)**
 
 ![Production GenAI Architecture Map](assets/production-genai-architecture-map.svg)
 
@@ -66,10 +66,10 @@ Locked lessons use the same **Continue the course** or **Member chapter** bounda
 
 ## Continue with practice
 
-- [GenAI architecture scenarios](https://www.fdehandbook.com/practice/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
-- [Build an agent loop from scratch](https://www.fdehandbook.com/practice/coding/agent-loop-from-scratch?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
-- [AI Mock Interviewer](https://www.fdehandbook.com/practice/mock/ai-interviewer?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
-- [30-day FDE study plan](https://www.fdehandbook.com/learn/study-plan?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide)
+- [GenAI architecture scenarios](https://www.fdehandbook.com/practice/genai-architecture?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide&utm_content=readme_practice)
+- [Build an agent loop from scratch](https://www.fdehandbook.com/practice/coding/agent-loop-from-scratch?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide&utm_content=readme_agent_loop)
+- [AI Mock Interviewer](https://www.fdehandbook.com/practice/mock/ai-interviewer?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide&utm_content=readme_mock_interview)
+- [30-day FDE study plan](https://www.fdehandbook.com/learn/study-plan?utm_source=github&utm_medium=referral&utm_campaign=genai_field_guide&utm_content=readme_study_plan)
 
 The previous question-bank README is preserved in [`Forward-Deployed Engineer (FDE) Interview Prep/question-bank.md`](<Forward-Deployed Engineer (FDE) Interview Prep/question-bank.md>).
 
